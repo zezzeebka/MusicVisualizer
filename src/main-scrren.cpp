@@ -1,13 +1,13 @@
-#include "background.h"
+#include "main-Screen.h"
 
 
 
-Background::Background()
+MainScreen::MainScreen()
 {
 
 }
 
-Background::~Background()
+MainScreen::~MainScreen()
 {
    delete _defaultImage;
    delete _font;

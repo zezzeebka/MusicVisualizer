@@ -2,15 +2,15 @@
 #define BACKGROUND_H
 #include <SFML/Graphics.hpp>
 
-class Background
+class MainScreen
 {
 private:
     sf::Image* _defaultImage;
     sf::Font* _font;
     sf::Text* _text;
 public:
-    Background();
-    ~Background();
+    MainScreen();
+    ~MainScreen();
 };
 
 #endif // BACKGROUND_H

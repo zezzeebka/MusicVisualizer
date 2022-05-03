@@ -68,18 +68,3 @@ void StartScreen::setFile()
     }
 }
 
-std::string StartScreen::getFilename()
-{
-    std::string str(filename);
-    return str;
-}
-
-sf::Text *StartScreen::getText()
-{
-    return Text;
-}
-
-void StartScreen::setText(std::string text)
-{
-    Text->setString(text);
-}
