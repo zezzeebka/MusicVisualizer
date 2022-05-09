@@ -23,6 +23,7 @@ int main()
             switch ( event.type )
             {
             case sf::Event::Closed:
+                delete visualizer;
                 window.close();
                 break;
 
