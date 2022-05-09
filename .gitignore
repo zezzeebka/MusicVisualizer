@@ -39,6 +39,8 @@ data
 SFML-2.5.1
 CMakeLists.txt.user*
 imgui
+src/start-screen.cpp
+src/start-screen.h
 # qtcreator generated files
 *.pro.user*
 
