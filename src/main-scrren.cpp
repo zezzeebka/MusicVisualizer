@@ -9,7 +9,7 @@ MainScreen::MainScreen()
 
 MainScreen::~MainScreen()
 {
-
+    delete handler;
 }
 
 void MainScreen::SampleParser(sf::Sound* _music){

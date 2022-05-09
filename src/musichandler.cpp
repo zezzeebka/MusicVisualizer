@@ -14,6 +14,10 @@ MusicHandler::MusicHandler()
     music->play();
     int i = 1;
 }
+MusicHandler::~MusicHandler(){
+    delete musicBuffer;
+    delete music;
+}
 
 sf::Sound* MusicHandler::getMusic(){
     return music;
