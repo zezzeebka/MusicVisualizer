@@ -1,16 +1,22 @@
 #include <SFML/Graphics.hpp>
 #include "musichandler.h"
-#include "start-screen.h"
-
+#include <chrono>
+#include "main-screen.h"
+std::chrono::time_point<std::chrono::system_clock> start= std::chrono::system_clock::now();
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1600, 900), "SFML works!");
+    window.setFramerateLimit(60);
 
-    StartScreen* startScreen = new StartScreen();
-    MusicHandler* musicHandler = new MusicHandler();
-
+    MainScreen* visualizer = new MainScreen();
     while (window.isOpen())
     {
+
+        std::chrono::time_point<std::chrono::system_clock> end = std::chrono::system_clock::now();
+        std::chrono::duration<double> elapsed_seconds = end - start;
+
+
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -26,13 +32,14 @@ int main()
             }
             }
         }
-    }
+
 
         window.clear();
 
-        //window.draw();
+        visualizer->Draw(window);
 
         window.display();
+    }
 
     return 0;
 }

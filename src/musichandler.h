@@ -5,11 +5,12 @@
 class MusicHandler
 {
     sf::SoundBuffer* musicBuffer;
-    sf::Music* music;
-
+    sf::Sound* music = new sf::Sound();
 public:
     MusicHandler();
     ~MusicHandler();
+    sf::Sound* getMusic();
+    sf::SoundBuffer getBuffer();
 
 };
 
